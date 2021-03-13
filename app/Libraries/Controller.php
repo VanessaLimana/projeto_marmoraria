@@ -12,8 +12,8 @@ class Controller {
         if(file_exists($arquivo)):
             require_once $arquivo;
         else:
-            die('O arquivo nao existe');
+            die('O arquivo de view não existe!');
         endif;
-        
-        }
+    }
+
 }
