@@ -1,10 +1,33 @@
 <?php
 
-class Usuarios extends Controller {
+class Usuarios extends Controller
+{
 
-    public function cadastrar(){
-        echo 'cadastrou o metodo';
+    public function cadastrar()
+    {
 
-        $this->view('usuarios/cadastrar');
+        $formulario = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+        if(isset($formulario)) :
+            $dados = [
+                'nome' => trim($formulario['nome']),
+                'email' => trim($formulario['email']),
+                'senha' => trim($formulario['senha']),
+                'confirma_senha' => trim($formulario['confirma_senha']),
+            ];
+            if(empty($formulario['nome'])):
+                echo 'Vazio';
+            endif;
+
+            var_dump($formulario);
+        else :
+            $dados = [
+                'nome' => '',
+                'email' => '',
+                'senha' => '',
+                'confirma_senha' => '',
+            ];
+
+        endif;
+        $this->view('usuarios/cadastrar', $dados);
     }
 }

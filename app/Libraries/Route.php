@@ -24,7 +24,7 @@ class Route {
        endif;
 
        $this->parametros = $url ? array_values($url) : [];
-       //call_user_func_array — Chama uma dada função de usuário com um array de parâmetros
+     
        call_user_func_array([$this->controlador, $this->metodo], $this->parametros);
 
     }
