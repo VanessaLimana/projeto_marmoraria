@@ -7,15 +7,15 @@ class Paginas extends Controller {
             'tituloPagina' => 'Página Inicial'
         ];
 
-        $this->view('paginas/home', $dados);
+        $this->view('pages/home', $dados);
     }
 
     public function sobre(){
         $dados = [
-            'tituloPagina' => 'Página Sobre '
+            'tituloPagina' => SITE_MARMORARIA
         ];
 
-        $this->view('paginas/sobre', $dados);
+        $this->view('pages/sobre', $dados);
     }
     
 }

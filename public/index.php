@@ -1,18 +1,13 @@
 <?php
 include './../app/config.php';
-include './../app/Libraries/Route.php';
-include './../app/Libraries/Controller.php';
-include './../app/Libraries/Db.php';
-$dba = new Db;
-
+include './../app/autoload.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=SITE_MARMORARIA ?></title>
+    <title><?=SITE_MARMORARIA?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?=URL?>/public/css/estilos.css">
 </head>
@@ -22,7 +17,6 @@ $dba = new Db;
         $routes = new Route();
         include '../app/Views/footer.php';
     ?>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
